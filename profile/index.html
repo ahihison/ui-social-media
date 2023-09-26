@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Include the Material Icons CSS library -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="profile">
+      <div class="images">
+        <img
+          src="https://images.pexels.com/photos/13440765/pexels-photo-13440765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt=""
+          class="cover"
+        />
+        <img
+          src="https://images.pexels.com/photos/14028501/pexels-photo-14028501.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""
+          class="profilePic"
+        />
+      </div>
+      <div class="profileContainer">
+        <div class="uInfo">
+          <div class="left">
+            <a href="http://facebook.com"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="http://facebook.com"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="http://facebook.com"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="http://facebook.com"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="http://facebook.com"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+          <div class="center">
+            <span>Jane Doe</span>
+            <div class="info">
+              <div class="item">
+                <i class="material-icons">place</i>
+                <span>USA</span>
+              </div>
+              <div class="item">
+                <i class="material-icons">language</i>
+                <span>lama.dev</span>
+              </div>
+            </div>
+            <button>Follow</button>
+          </div>
+          <div class="right">
+            <i class="material-icons">email</i>
+            <i class="material-icons">more_vert</i>
+          </div>
+        </div>
+        <div id="post-container"></div>
+        <!-- Include Posts content here -->
+      </div>
+    </div>
+  </body>
+  <script>
+    function generatePostHTML(post) {
+      return `
+    <div class="post">
+      <div class="container">
+        <div class="user">
+          <div class="userInfo">
+            <img src="${post.profilePic}" alt="User Profile Pic">
+            <div class="details">
+              <a href="/profile/${post.userId}" style="text-decoration: none; color: inherit;">
+                <span class="name">${post.name}</span>
+              </a>
+              <span class="date">1 min ago</span>
+            </div>
+          </div>
+          <span class="more-icon">...</span>
+        </div>
+        <div class="content">
+          <p>${post.desc}</p>
+          <img src="${post.img}" alt="Post Image">
+        </div>
+        <div class="info">
+          <div class="item">
+            <span class="like-icon"><i class="fa-regular fa-heart"></i></span>
+            12 Likes
+          </div>
+          <div class="item" onclick="toggleComments()">
+            <span class="comment-icon"><i class="fa-regular fa-comment-dots"></i></span>
+            12 Comments
+          </div>
+          <div class="item">
+            <span class="share-icon"><i class="fa-solid fa-share"></i></span>
+            Share
+          </div>
+        </div>
+        <div class="comments">
+          <!-- Comments section, replace with your comments -->
+        </div>
+      </div>
+    </div>
+  `;
+    }
+    const posts = [
+      {
+        id: 1,
+        name: "John Doe",
+        userId: 1,
+        profilePic:
+          "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+        img: "https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      },
+      {
+        id: 2,
+        name: "Jane Doe",
+        userId: 2,
+        profilePic:
+          "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        desc: "Tenetur iste voluptates dolorem rem commodi voluptate pariatur, voluptatum, laboriosam consequatur enim nostrum cumque! Maiores a nam non adipisci minima modi tempore.",
+      },
+    ];
+
+    // Get the container where you want to include the posts
+    const postContainer = document.getElementById("post-container");
+
+    // Loop through the posts and append them to the container
+    posts.forEach((post) => {
+      const postHTML = generatePostHTML(post);
+      postContainer.innerHTML += postHTML;
+    });
+  </script>
+</html>
