@@ -1,0 +1,198 @@
+/* Apply styles based on the defined themes */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 50px;
+  border-bottom: 1px solid var(--light-border);
+  position: sticky;
+  top: 0;
+  background-color: var(--light-bg);
+  color: var(--light-textColor);
+  z-index: 999;
+}
+
+/* Left side of the navbar */
+.navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Style the span element inside .left */
+.navbar .left span {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--light-logo);
+}
+
+/* Style the search bar */
+.navbar .left .search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--light-border);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Style the input inside the search bar */
+.navbar .left .search input {
+  border: none;
+  width: 500px;
+  background-color: transparent;
+  color: var(--light-textColor);
+
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    width: 200px;
+  }
+}
+.navbar .left .search input:focus {
+  outline: none;
+}
+/* Right side of the navbar */
+.navbar .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  /* Hide the entire right section on mobile */
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+/* Style the user section in the right side */
+.navbar .right .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+
+  /* Hide the user section on tablets */
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+/* Style the user's image */
+.navbar .right .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Style the user's name */
+.navbar .right .user span {
+  /* Add your styles here */
+}
+.fa-house,
+.fa-moon,
+.fa-table-cells-large,
+.fa-user,
+.fa-envelope,
+.fa-bell {
+  font-size: 20px;
+  color: var(--light-textColor);
+  cursor: pointer;
+}
+.container-content {
+  display: flex;
+}
+
+/*================= LEFT BAR====================== */
+/* Import external styles */
+
+.leftBar {
+  /* Apply styles based on the defined themes */
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  background-color: var(--light-bg); /* Assuming themed("bg") is a variable */
+  color: var(
+    --light-textColor
+  ); /* Assuming themed("textColor") is a variable */
+
+  /* Hide on mobile */
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  /* Hide scrollbar */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Styles for .container */
+.leftBar .container {
+  padding: 20px;
+}
+
+/* Horizontal rule styles */
+.leftBar .container hr {
+  margin: 20px 0px;
+  border: none;
+  height: 0.5px;
+  background-color: var(
+    --light-border
+  ); /* Assuming themed("border") is a variable */
+}
+
+/* Styles for .menu */
+.leftBar .container .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Styles for span elements inside .menu */
+.leftBar .container .menu span {
+  font-size: 12px;
+}
+
+/* Styles for .user section */
+.leftBar .container .menu .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Styles for user's image */
+.leftBar .container .menu .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Styles for user's name */
+.leftBar .container .menu .user span {
+  font-size: 14px;
+}
+
+/* Styles for .item section */
+.leftBar .container .menu .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Styles for item's image */
+.leftBar .container .menu .item img {
+  width: 30px;
+}
+
+/* Styles for item's text */
+.leftBar .container .menu .item span {
+  font-size: 14px;
+}
