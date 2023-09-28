@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 20px !important;
   height: 50px;
   border-bottom: 1px solid var(--light-border);
-  position: sticky;
+  position: sticky !important;
   top: 0;
   background-color: var(--light-bg);
   color: var(--light-textColor);
@@ -67,7 +67,11 @@
     display: none;
   }
 }
-
+.leftBar .container .menu .shortcuts,
+.leftBar .container .menu .others {
+  font-weight: 700 !important;
+  font-size: 14px;
+}
 /* Style the user section in the right side */
 .navbar .right .user {
   display: flex;
@@ -113,6 +117,7 @@
 .leftBar {
   /* Apply styles based on the defined themes */
   flex: 2;
+  margin-right: 20px;
   position: sticky;
   top: 70px;
   height: calc(100vh - 70px);
@@ -135,7 +140,7 @@
 
 /* Styles for .container */
 .leftBar .container {
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 /* Horizontal rule styles */
@@ -158,6 +163,7 @@
 /* Styles for span elements inside .menu */
 .leftBar .container .menu span {
   font-size: 12px;
+  font-weight: 500;
 }
 
 /* Styles for .user section */
@@ -195,4 +201,207 @@
 /* Styles for item's text */
 .leftBar .container .menu .item span {
   font-size: 14px;
+}
+
+/* OUTLET */
+.outlet {
+  flex: 6;
+}
+/* RIGHT BAR */
+/* Import styles from "../../style.scss" here if needed */
+
+.rightBar {
+  flex: 3;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  background-color: var(--bgSoft);
+}
+
+@media screen and (max-width: 768px) {
+  .rightBar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .rightBar {
+    display: none;
+  }
+}
+
+.rightBar::-webkit-scrollbar {
+  display: none;
+}
+
+.rightBar .container {
+  padding: 20px;
+}
+
+.rightBar .item {
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: var(--bg);
+}
+
+.rightBar span {
+  color: gray;
+}
+
+.rightBar .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+.rightBar .user .userInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.rightBar .user .userInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.rightBar .user .userInfo .online {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: limegreen;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+
+.rightBar .user .userInfo p {
+  color: var(--textColorSoft);
+}
+
+.rightBar .user .userInfo span {
+  font-weight: 500;
+  color: var(--textColor);
+}
+
+.rightBar .user .buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightBar .user .buttons button {
+  border: none;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.rightBar .user .buttons button:first-child {
+  background-color: #5271ff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.rightBar .user .buttons button:last-child {
+  background-color: #f0544f;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* STORIES */
+/* Import styles from "../../style.scss" here if needed */
+
+.stories {
+  display: flex;
+  gap: 10px;
+  height: 250px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .stories {
+    height: 50px;
+    margin-bottom: 0;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .stories {
+    height: 150px;
+    gap: 20px;
+  }
+}
+
+.stories .story {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .stories .story {
+    flex: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.stories .story img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stories .story span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .stories .story span {
+    display: none;
+  }
+}
+
+.stories .story button {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  color: white;
+  background-color: #5271ff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .stories .story button {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+.modal-title {
+  text-align: center;
 }
