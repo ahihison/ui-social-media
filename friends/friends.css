@@ -55,8 +55,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
-  margin-top: 44px;
+  width: 80%;
+  margin: 0 auto;
 }
 .profile .profileContainer .uInfo.uInfoFriend {
   margin-top: 0px;
@@ -89,6 +89,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .profile .profileContainer .uInfo .center span {
@@ -131,22 +132,29 @@
   display: flex;
   align-items: center;
 }
+.fa-house,
+.fa-moon,
+.fa-table-cells-large,
+.fa-user,
+.fa-envelope,
+.fa-bell {
+  font-size: 20px;
+  color: var(--light-textColor);
+  cursor: pointer;
+}
 .fa-facebook,
 .fa-instagram,
 .fa-twitter,
 .fa-github,
 .fa-linkedin {
-  font-size: 18px;
+  font-size: 20px;
   /* margin-right: 10px; */
 }
-
 .uInfoFriend span {
   font-size: 20px;
   font-weight: 700;
 }
-.profile .profileContainer .uInfo {
-  align-items: start;
-}
+
 .search {
   display: flex;
   align-items: center;
@@ -182,6 +190,7 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  width: 90%;
 }
 .name-friend {
   flex-direction: column;
@@ -191,19 +200,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 16px;
   gap: 10px;
   margin-bottom: 20px;
+  /* border: solid #ccc 1px; */
+  /* margin-right: 20px; */
+  border-radius: 10px;
+  box-shadow: #ccc 0px 0px 2px 0px;
+}
+.container-Friends.col-5 {
+  width: 49%;
 }
 .info-friend img {
   width: 80px;
   height: 80px;
   border-radius: 8px;
+  border: solid #ccc 1px;
 }
 .info-friend .username {
   font-size: 18px;
+}
+.info-friend .username:hover {
+  text-decoration: underline;
 }
 .info-friend .mutual-friend {
   font-size: 14px;
   font-weight: 500;
   color: var(--light-textColorSoft);
+}
+.more-icon {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.more-icon:hover {
+  background-color: #e4e6eb;
+}
+.group-friends {
+  display: flex;
+  justify-content: space-between;
 }
