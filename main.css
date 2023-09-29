@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px !important;
-  height: 50px;
+  padding: 20px 20px !important;
+  /* height: 50px; */
   border-bottom: 1px solid var(--light-border);
   position: sticky !important;
   top: 0;
@@ -140,7 +140,7 @@
 
 /* Styles for .container */
 .leftBar .container {
-  /* padding: 20px; */
+  padding: 20px;
 }
 
 /* Horizontal rule styles */
@@ -404,4 +404,29 @@
 }
 .modal-title {
   text-align: center;
+}
+
+.edit-profile {
+  width: 70%;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #e4e6eb;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  border: none;
+  color: #050505;
+  display: block;
+}
+.edit-profile i {
+  margin-right: 8px;
+}
+.edit-profile a {
+  font-weight: 600;
+}
+
+.edit-profile:hover {
+  background-color: #d4d6db;
 }

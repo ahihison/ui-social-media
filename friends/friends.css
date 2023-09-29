@@ -155,7 +155,7 @@
   font-weight: 700;
 }
 
-.search {
+.search-friend {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -166,13 +166,13 @@
 }
 
 /* Style the input inside the search bar */
-.search input {
+.search-friend input {
   border: none;
   width: 500px;
   background-color: transparent;
   color: var(--light-textColor);
 }
-.search input:focus {
+.search-friend input:focus {
   outline: none;
 }
 .infor-container {
@@ -241,4 +241,31 @@
 .group-friends {
   display: flex;
   justify-content: space-between;
+}
+/* Add your custom tooltip styling here */
+#customTooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.dropdown-menu .dropdown-item i {
+  margin-right: 10px;
+}
+.dropdown-menu .dropdown-item {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px !important;
+}
+.dropdown-menu {
+  padding: 10px !important;
+  width: 300px !important;
+}
+/* Custom styling for active nav-link */
+.nav-pills .nav-link.active {
+  color: blue;
+  text-decoration: underline;
 }
