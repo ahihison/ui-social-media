@@ -1,246 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./chat.css" />
-    <title>Document</title>
+    <title>Chat</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./chat.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <div id="container">
-      <aside>
-        <header>
-          <input type="text" placeholder="search" />
-        </header>
-        <ul>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status orange"></span>
-                offline
-              </h3>
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-md-4 col-xl-3 chat">
+          <div class="card mb-sm-3 mb-md-0 contacts_card">
+            <div class="card-header">
+              <div class="input-group">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  name=""
+                  class="form-control search"
+                />
+                <div class="input-group-prepend">
+                  <span class="input-group-text search_btn"
+                    ><i class="fas fa-search"></i
+                  ></span>
+                </div>
+              </div>
             </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status green"></span>
-                online
-              </h3>
+            <div class="card-body contacts_body">
+              <ui class="contacts" id="contactList"> </ui>
             </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_03.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status orange"></span>
-                offline
-              </h3>
-            </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_04.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status green"></span>
-                online
-              </h3>
-            </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_05.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status orange"></span>
-                offline
-              </h3>
-            </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_06.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status green"></span>
-                online
-              </h3>
-            </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_07.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status green"></span>
-                online
-              </h3>
-            </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_08.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status green"></span>
-                online
-              </h3>
-            </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_09.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status green"></span>
-                online
-              </h3>
-            </div>
-          </li>
-          <li>
-            <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_10.jpg"
-              alt=""
-            />
-            <div>
-              <h2>Prénom Nom</h2>
-              <h3>
-                <span class="status orange"></span>
-                offline
-              </h3>
-            </div>
-          </li>
-        </ul>
-      </aside>
-      <main>
-        <header>
-          <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg"
-            alt=""
-          />
-          <div>
-            <h2>Chat with Vincent Porter</h2>
-            <h3>already 1902 messages</h3>
+            <div class="card-footer"></div>
           </div>
-          <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_star.png"
-            alt=""
-          />
-        </header>
-        <ul id="chat">
-          <li class="you">
-            <div class="entete">
-              <span class="status green"></span>
-              <h2>Vincent</h2>
-              <h3>10:12AM, Today</h3>
+        </div>
+        <div class="col-md-8 col-xl-6 chat">
+          <div class="card">
+            <div class="card-header msg_head">
+              <div class="d-flex bd-highlight">
+                <div class="img_cont">
+                  <img
+                    src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"
+                    class="rounded-circle user_img"
+                  />
+                  <span class="online_icon"></span>
+                </div>
+                <div class="user_info">
+                  <span>khalid Charif</span>
+                  <p>1767 Messages</p>
+                </div>
+                <div class="video_cam">
+                  <span><i class="fas fa-video"></i></span>
+                  <span><i class="fas fa-phone"></i></span>
+                </div>
+              </div>
+              <span id="action_menu_btn"
+                ><i class="fas fa-ellipsis-v"></i
+              ></span>
+              <div class="action_menu">
+                <ul>
+                  <li><i class="fas fa-user-circle"></i> View profile</li>
+                  <li><i class="fas fa-users"></i> Add to close friends</li>
+                  <li><i class="fas fa-plus"></i> Add to group</li>
+                  <li><i class="fas fa-ban"></i> Block</li>
+                </ul>
+              </div>
             </div>
-            <div class="triangle"></div>
-            <div class="message">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor.
+            <div class="card-body msg_card_body">
+              <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img
+                    src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+                <div class="msg_cotainer">
+                  Hi, how are you samim?
+                  <span class="msg_time">8:40 AM, Today</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mb-4">
+                <div class="msg_cotainer_send">
+                  Hi Khalid i am good tnx how about you?
+                  <span class="msg_time_send">8:55 AM, Today</span>
+                </div>
+                <div class="img_cont_msg">
+                  <img
+                    src="https://avatars.hsoubcdn.com/ed57f9e6329993084a436b89498b6088?s=256"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+              </div>
+              <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img
+                    src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+                <div class="msg_cotainer">
+                  I am good too, thank you for your chat template
+                  <span class="msg_time">9:00 AM, Today</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mb-4">
+                <div class="msg_cotainer_send">
+                  You are welcome
+                  <span class="msg_time_send">9:05 AM, Today</span>
+                </div>
+                <div class="img_cont_msg">
+                  <img
+                    src="https://avatars.hsoubcdn.com/ed57f9e6329993084a436b89498b6088?s=256"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+              </div>
+              <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img
+                    src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+                <div class="msg_cotainer">
+                  I am looking for your next templates
+                  <span class="msg_time">9:07 AM, Today</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end mb-4">
+                <div class="msg_cotainer_send">
+                  Ok, thank you have a good day
+                  <span class="msg_time_send">9:10 AM, Today</span>
+                </div>
+                <div class="img_cont_msg">
+                  <img
+                    src="https://avatars.hsoubcdn.com/ed57f9e6329993084a436b89498b6088?s=256"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+              </div>
+              <div class="d-flex justify-content-start mb-4">
+                <div class="img_cont_msg">
+                  <img
+                    src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg"
+                    class="rounded-circle user_img_msg"
+                  />
+                </div>
+                <div class="msg_cotainer">
+                  Bye, see you
+                  <span class="msg_time">9:12 AM, Today</span>
+                </div>
+              </div>
             </div>
-          </li>
-          <li class="me">
-            <div class="entete">
-              <h3>10:12AM, Today</h3>
-              <h2>Vincent</h2>
-              <span class="status blue"></span>
+            <div class="card-footer">
+              <div class="input-group">
+                <div class="input-group-append" id="fileUploadButton">
+                  <span class="input-group-text attach_btn"
+                    ><i class="fas fa-paperclip"></i
+                  ></span>
+                  <input type="file" id="fileInput" style="display: none" />
+                </div>
+                <textarea
+                  name=""
+                  class="form-control type_msg"
+                  placeholder="Type your message..."
+                ></textarea>
+                <div class="input-group-append">
+                  <span class="input-group-text send_btn"
+                    ><i class="fas fa-location-arrow"></i
+                  ></span>
+                </div>
+              </div>
             </div>
-            <div class="triangle"></div>
-            <div class="message">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor.
-            </div>
-          </li>
-          <li class="me">
-            <div class="entete">
-              <h3>10:12AM, Today</h3>
-              <h2>Vincent</h2>
-              <span class="status blue"></span>
-            </div>
-            <div class="triangle"></div>
-            <div class="message">OK</div>
-          </li>
-          <li class="you">
-            <div class="entete">
-              <span class="status green"></span>
-              <h2>Vincent</h2>
-              <h3>10:12AM, Today</h3>
-            </div>
-            <div class="triangle"></div>
-            <div class="message">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor.
-            </div>
-          </li>
-          <li class="me">
-            <div class="entete">
-              <h3>10:12AM, Today</h3>
-              <h2>Vincent</h2>
-              <span class="status blue"></span>
-            </div>
-            <div class="triangle"></div>
-            <div class="message">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor.
-            </div>
-          </li>
-          <li class="me">
-            <div class="entete">
-              <h3>10:12AM, Today</h3>
-              <h2>Vincent</h2>
-              <span class="status blue"></span>
-            </div>
-            <div class="triangle"></div>
-            <div class="message">OK</div>
-          </li>
-        </ul>
-        <footer>
-          <textarea placeholder="Type your message"></textarea>
-          <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png"
-            alt=""
-          />
-          <img
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png"
-            alt=""
-          />
-          <a href="#">Send</a>
-        </footer>
-      </main>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./chat.js"></script>
+    <script>
+      // Sample data for generating list items
+      const contactData = [
+        {
+          name: "Khalid Charif",
+          status: "Online",
+          imageSrc:
+            "https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg",
+          online: true,
+        },
+        {
+          name: "Chaymae Naim",
+          status: "Left 7 mins ago",
+          imageSrc:
+            "https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg",
+          online: false,
+        },
+        {
+          name: "Khalid Charif",
+          status: "Online",
+          imageSrc:
+            "https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg",
+          online: true,
+        },
+        {
+          name: "Chaymae Naim",
+          status: "Left 7 mins ago",
+          imageSrc:
+            "https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg",
+          online: false,
+        },
+        {
+          name: "Khalid Charif",
+          status: "Online",
+          imageSrc:
+            "https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg",
+          online: true,
+        },
+        {
+          name: "Chaymae Naim",
+          status: "Left 7 mins ago",
+          imageSrc:
+            "https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg",
+          online: false,
+        },
+        // Add more data as needed
+      ];
+
+      // Function to create a list item
+      function createListItem(contact) {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `
+              <div class="d-flex bd-highlight">
+                  <div class="img_cont">
+                      <img src="${
+                        contact.imageSrc
+                      }" class="rounded-circle user_img" />
+                      <span class="online_icon${
+                        contact.online ? "" : " offline"
+                      }"></span>
+                  </div>
+                  <div class="user_info">
+                      <span>${contact.name}</span>
+                      <p>${contact.status}</p>
+                  </div>
+              </div>
+          `;
+        return listItem;
+      }
+
+      // Get the contact list container
+      const contactList = document.getElementById("contactList");
+
+      // Loop through the contact data and generate list items
+      contactData.forEach((contact, index) => {
+        const listItem = createListItem(contact);
+        // Add the "active" class to the first list item
+        if (index === 0) {
+          listItem.classList.add("active");
+        }
+        contactList.appendChild(listItem);
+      });
+    </script>
   </body>
 </html>
