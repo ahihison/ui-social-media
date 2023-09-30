@@ -45,15 +45,24 @@
         </div>
       </div>
       <div class="right">
-        <i class="fa-regular fa-user"></i>
-        <i class="fa-regular fa-envelope"></i>
+        <a href="../friends/index.html">
+          <i class="fa-regular fa-user">
+            <div class="notice-addfr">4</div>
+          </i>
+        </a>
+     
+      <a href="../chat/index.html">
+        <i class="fa-regular fa-envelope">
+          <div class="notice-message">2</div>
+        </i>
+      </a>
         <i class="fa-regular fa-bell"></i>
         <div class="user">
           <img
             src="https://images.pexels.com/photos/14028501/pexels-photo-14028501.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
             alt=""
           />
-          <span>John</span>
+          
         </div>
       </div>
     </div>
@@ -71,8 +80,11 @@
               <span>John Doe</span>
             </div>
             <div class="item">
-              <img src="../assets/1.png" alt="" />
-              <span>Friends</span>
+              <a href="/friends/index.html">
+                <img src="../assets/1.png" alt="" />
+                <span>Friends</span>
+              </a>
+             
             </div>
             <div class="item">
               <img src="../assets/2.png" alt="" />
@@ -184,7 +196,90 @@
               </div>
               <div class="right">
                 <i class="material-icons">email</i>
-                <i class="material-icons">more_vert</i>
+                <!-- Edit Profile div -->
+  <div class="edit-profile" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+   
+    <i class="fa-solid fa-pen"></i>Edit Profile
+
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Add your form or content for editing the profile here -->
+            <div class="avatar-editprofile">
+              <div class="container-avt">
+                <div class="title-edit">Avatar</div>
+                
+                <a href="#" class="textEdit">Edit</a>
+              </div>
+              <img src="https://images.pexels.com/photos/14028501/pexels-photo-14028501.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" class="avt-img">
+            </div>
+            <div class="coverimg-editprofile ">
+              <div class="container-coverimg">
+                <div class="title-edit">Cover image</div>
+                
+                <a href="#" class="textEdit">Edit</a>
+              </div>
+              <img src="https://images.pexels.com/photos/13440765/pexels-photo-13440765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="cover-img">
+            </div>
+            <div class="information-editprofile ">
+              <div class="container-information">
+                <div class="title-edit">Information</div>
+                
+                
+              </div>
+              <div class="group-information">
+                <span class="username-infor"><span>User Name:</span> <input id="userNameInput" value="John Doe"  /></span>
+               <span class="location"><span>Location: </span><input value="Ho Chi Minh"/></span>
+               <div class="group-otherlink">
+                <span class="username-infor"><span>Other Network</span> </span>
+                
+                <span class="otherlink"> 
+                  <div class="group-social">
+                    
+                    <i class="fa-brands fa-github"></i
+                      > Github
+                  </div>
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+                <span class="otherlink"> 
+                  <div class="group-social">
+                    <i class="fa-brands fa-instagram"></i>
+                    
+                    Instagram
+                  </div>
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+                <span class="otherlink"> 
+                  <div class="group-social">
+                    
+                    <i class="fa-brands fa-twitter"></i
+                      >Twitter
+                  </div>
+                  <i class="fa-solid fa-xmark"></i>
+                </span>
+                  
+               </div>
+              
+              </div>
+              
+             
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+</div>
+</div>
               </div>
             </div>
           </div>
@@ -399,7 +494,14 @@
                 <span class="date">1 min ago</span>
               </div>
             </div>
-            <span class="more-icon">...</span>
+            <div class="more-icon" id="dropdownTrigger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>...</span>
+      </div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownTrigger">
+          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i></i>Delete</a></li>
+          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-eye-slash"></i>Hide Post</a></li>
+        
+      </ul>
           </div>
           <div class="content">
             <p>${post.desc}</p>

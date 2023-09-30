@@ -253,7 +253,7 @@
   z-index: 1000;
 }
 .dropdown-menu .dropdown-item i {
-  margin-right: 10px;
+  marginprofile-right: 10px;
 }
 .dropdown-menu .dropdown-item {
   font-size: 16px;
@@ -266,6 +266,21 @@
 }
 /* Custom styling for active nav-link */
 .nav-pills .nav-link.active {
-  color: blue;
   text-decoration: underline;
+  color: #5271ff !important;
+  background: transparent !important;
+}
+.nav-item {
+  width: auto !important;
+}
+.nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--light-textColor) !important;
+  /* background: transparent; */
+  line-height: 24px;
+  text-align: start;
+}
+.nav-item button {
+  width: 100%;
 }

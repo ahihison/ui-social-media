@@ -192,7 +192,10 @@
   align-items: center;
   gap: 10px;
 }
-
+a {
+  text-decoration: none !important;
+  color: var(--light-textColor) !important;
+}
 /* Styles for item's image */
 .leftBar .container .menu .item img {
   width: 30px;
@@ -407,14 +410,10 @@
 }
 
 .edit-profile {
-  width: 70%;
   padding: 12px;
   cursor: pointer;
   border-radius: 6px;
   background-color: #e4e6eb;
-  align-items: center;
-  display: flex;
-  justify-content: center;
 
   border: none;
   color: #050505;
@@ -429,4 +428,330 @@
 
 .edit-profile:hover {
   background-color: #d4d6db;
+}
+.container-information,
+.container-coverimg,
+.container-avt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.information-editprofile .title-edit,
+.container-coverimg .title-edit,
+.container-avt .title-edit {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--light-textColor);
+}
+.information-editprofile .textEdit,
+.container-coverimg .textEdit,
+.container-avt .textEdit {
+  text-decoration: none;
+  font-size: 17px;
+  padding: 8px 20px;
+  font-weight: 500;
+  color: #5271ff !important;
+}
+.information-editprofile .textEdit:hover,
+.container-coverimg .textEdit:hover,
+.container-avt .textEdit:hover {
+  background-color: #f1f2f7;
+  border-radius: 6px;
+}
+.information-editprofile,
+.coverimg-editprofile,
+.avatar-editprofile {
+  padding: 20px 10px;
+}
+.avatar-editprofile .avt-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+.coverimg-editprofile .cover-img {
+  width: 70%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: 20px auto;
+}
+
+.group-information {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.group-information .location,
+.group-information .username-infor {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--light-textColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.group-otherlink {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.location,
+.username-infor {
+  padding: 0 20px;
+}
+.location input,
+.username-infor input {
+  padding: 20px;
+  border: none;
+  width: 80%;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--light-textColor);
+  margin-left: 20px;
+}
+.location input:focus,
+.username-infor input:focus {
+  outline: none;
+  box-shadow: #ccc 0px 0px 2px 0px;
+}
+.location span,
+.username-infor span {
+  width: 20%;
+  text-align: start;
+}
+
+.group-otherlink .otherlink {
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  gap: 0px 100px;
+  align-items: center;
+}
+.group-otherlink .otherlink i {
+  margin-right: 10px;
+}
+
+.otherlink .group-social {
+  display: flex;
+  gap: 10px;
+  width: 20%;
+}
+.otherlink i {
+  cursor: pointer;
+}
+.notice-message,
+.notice-addfr {
+  position: absolute;
+  top: -14px;
+  right: -12px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.right .fa-envelope,
+.right .fa-user {
+  position: relative;
+}
+/* ==============UPPOST=================== */
+.input-uppost {
+  width: 90%;
+  outline: none;
+  /* border: solid 1px; */
+  /* background-color: #3a3b3c; */
+}
+.input-uppost input {
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  background: #f0f2f5;
+  border-radius: 20px;
+  margin-left: -10px;
+}
+.input-uppost input:hover {
+  background: #dcddde;
+  cursor: pointer;
+}
+.line {
+  width: 98%;
+  margin-top: 20px;
+}
+.other-chose {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+}
+.other-chose div {
+  padding: 5px 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other-chose div i {
+  margin-right: 6px;
+  font-size: 22px;
+}
+.other-chose div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.fa-video {
+  color: red;
+}
+.fa-face-smile {
+  color: orange;
+}
+.fa-image {
+  color: green;
+}
+.info-post .userInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 10px;
+}
+
+.info-post .userInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.info-post .userInfo .name-user {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.info-post .userInfo .container-info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 40%;
+  flex-direction: column;
+}
+.form-select {
+  width: 25% !important;
+}
+.input-post {
+  margin: 20px 0px;
+  font-size: 18px;
+}
+.input-post textarea:focus-visible {
+  outline: none;
+}
+/* Add your custom tooltip styling here */
+#customTooltip {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+.dropdown-menu .dropdown-item i {
+  margin-right: 10px;
+}
+.dropdown-menu .dropdown-item {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px !important;
+  margin-top: 10px !important;
+}
+.dropdown-menu {
+  padding: 10px !important;
+  width: 300px !important;
+}
+/* Custom styling for active nav-link */
+.nav-pills .nav-link.active {
+  color: blue;
+  text-decoration: underline;
+}
+.more-icon {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.more-icon:hover {
+  background-color: #e4e6eb;
+}
+.more-icon span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.avatar-user {
+  cursor: pointer;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: transparent !important;
+}
+
+.drop-search {
+  width: 100% !important;
+  max-height: 500px !important;
+  overflow-y: scroll !important;
+}
+.user-search {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 0px 50px;
+}
+.user-search img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: -20px;
+}
+.recently {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--light-textColor);
+}
+.dropdown-item:hover {
+  border-radius: 10px !important;
+}
+
+.name-search .location-search {
+  font-size: 14px !important;
+  color: #ccc !important;
+  font-weight: 400 !important;
+}
+.time-search {
+  position: absolute;
+  right: 20px;
+
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.time-search:hover {
+  background-color: #e4e6eb;
 }
