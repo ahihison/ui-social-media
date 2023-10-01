@@ -12,7 +12,14 @@ function generatePostHTML(post) {
               <span class="date">1 min ago</span>
             </div>
           </div>
-          <span class="more-icon">...</span>
+          <div class="more-icon" id="dropdownTrigger" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span>...</span>
+      </div>
+      <ul class="dropdown-menu" aria-labelledby="dropdownTrigger">
+          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i></i>Delete</a></li>
+          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-eye-slash"></i>Hide Post</a></li>
+        
+      </ul>
         </div>
         <div class="content">
           <p>${post.desc}</p>

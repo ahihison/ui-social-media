@@ -78,6 +78,9 @@
   align-items: center;
   gap: 10px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
 
   /* Hide the user section on tablets */
   @media (max-width: 1024px) {
@@ -548,6 +551,7 @@ a {
 .otherlink i {
   cursor: pointer;
 }
+.notice-notifi,
 .notice-message,
 .notice-addfr {
   position: absolute;
@@ -676,9 +680,16 @@ a {
   padding: 10px !important;
   margin-top: 10px !important;
 }
+.dropdown-menu .dropdown-item .detail-noti {
+  white-space: normal;
+  overflow: hidden;
+}
 .dropdown-menu {
   padding: 10px !important;
   width: 300px !important;
+}
+.drop-noti {
+  width: 400px !important;
 }
 /* Custom styling for active nav-link */
 .nav-pills .nav-link.active {
